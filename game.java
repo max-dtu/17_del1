@@ -1,23 +1,32 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
+
+
     private int player1Score;
     private int player2Score;
     private Random random;
+    private Scanner scanner;  
 
-    public Game() {
+    public Game() { // Method to initialize the game
         player1Score = 0;
         player2Score = 0;
         random = new Random();
+        scanner = new Scanner(System.in);  // Initialize the scanner
     }
 
     // Rolls a single die (returns a value between 1 and 6)
     private int rollDie() {
-        return random.nextInt(6) + 1;
+        return random.nextInt(6) + 1; // returns a random integer [1, 6]
     }
 
     // returns true if the player won
-    private boolean playTurn(int playerNum) {
+    private boolean play(int playerNum) {
+        // Wait for user to press Enter to roll the dice
+        System.out.println("Player " + playerNum + ", press Enter to roll the dice...");
+        scanner.nextLine();  // Wait for Enter key
+
         int die1 = rollDie();
         int die2 = rollDie();
         int sum = die1 + die2;
@@ -42,8 +51,7 @@ public class Game {
         }
 
         // Check if player won by reaching 40 or more points
-        if ((playerNum == 1 && player1Score >= 40 && sameDice) ||
-            (playerNum == 2 && player2Score >= 40 && sameDice)) {
+        if (player1Score >= 40 || player2Score >= 40) {
             System.out.println("Player " + playerNum + " wins with two matching dice after reaching 40 points!");
             return true;
         }
@@ -51,7 +59,7 @@ public class Game {
         // If dice are the same, player gets another turn
         if (sameDice) {
             System.out.println("Player " + playerNum + " gets another turn!");
-            return playTurn(playerNum);  // Recursion for extra turn
+            return play(playerNum);  // Recursion for extra turn
         }
 
         return false;  // Player hasn't won yet
@@ -60,10 +68,10 @@ public class Game {
     public void startGame() {
         while (true) {
             System.out.println("Player 1's turn:");
-            if (playTurn(1)) break;
+            if (play(1)) break;
 
             System.out.println("Player 2's turn:");
-            if (playTurn(2)) break;
+            if (play(2)) break;
         }
     }
 
@@ -71,4 +79,6 @@ public class Game {
         Game game = new Game();  // Create an instance of Game
         game.startGame();  // Start the game
     }
+
+
 }
