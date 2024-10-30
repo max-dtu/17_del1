@@ -3,13 +3,13 @@ import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
-class Player {
+public class Player {
     private int playerNum;
     private int balance;  
     private Die die;         
     private Scanner scanner;  
     // Define rules as a dictionary where each key is the sum, and the value is an array with points and the console message
-    private Map<Integer, Object[]> rules = new HashMap<>() {{
+    private Map<Integer, Object[]> sumRules = new HashMap<>() {{
         put(2, new Object[]{250, "Congrats! You rolled a 2! You gain +250 points."});
         put(3, new Object[]{-100, "Oh no! You rolled a 3! You lose -100 points."});
         put(4, new Object[]{100, "Great roll! You got a sum of 4! You earn +100 points."});
@@ -50,8 +50,8 @@ class Player {
 
         System.out.println("Player " + playerNum + " rolls: " + die1 + " and " + die2);
 
-        if (rules.containsKey(sum)) {
-            Object[] rule = rules.get(sum);
+        if (sumRules.containsKey(sum)) {
+            Object[] rule = sumRules.get(sum);
             int points = (int) rule[0];
             String message = (String) rule[1];
 

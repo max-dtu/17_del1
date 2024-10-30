@@ -2,7 +2,7 @@ public class Account {
     private int balance = 1000;
 
 
-    public void deposit(int amount) {
+    public boolean deposit(int amount) {
         if (amount > 0) {
             balance += amount;
             return true; 
@@ -10,7 +10,7 @@ public class Account {
         return false;
     }
 
-    public void withdraw(int amount) {
+    public int withdraw(int amount) {
         if (amount > 0 && balance >= amount) {
             balance -= amount;
             return amount;
