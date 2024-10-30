@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Game {
     
-    Account player1Account = new Account();
-    Account player2Account = new Account();
-    private playBalanceOfPlayer1 = player1Account.withdraw(1000);
-    private playBalanceOfPlayer2 = player2Account.withdraw(1000);
+    Account private player1Account = new Account();
+    Account private player2Account = new Account();
+    int private playBalanceOfPlayer1 = player1Account.withdraw(1000);
+    int private playBalanceOfPlayer2 = player2Account.withdraw(1000);
 
     //The first argument is the playe's number (id), the second is his balance
     private Player player1 = new Player(1, playBalanceOfPlayer1);  
