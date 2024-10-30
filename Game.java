@@ -2,9 +2,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    //The first argument is the playe's number, the second is his initial balance/money
-    private Player player1 = new Player(1, 1000);  
-    private Player player2 = new Player(2, 1000);  
+    
+    player1Account = new Account();
+    player2Account = new Account();
+    private player1Money = Account.withdraw(1000);
+    private player2Money = Account.withdraw(1000);
+
+    //The first argument is the playe's number(id), the second is his balance
+    private Player player1 = new Player(1, player1Money);  
+    private Player player2 = new Player(2, player2Money);  
 
     public void start() {
         while (true) {
