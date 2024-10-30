@@ -1,6 +1,6 @@
 
 import java.util.Random;
-class Die {
+public class Die {
     private Random random;
 
     public Die() {
