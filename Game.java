@@ -5,12 +5,12 @@ public class Game {
     
     player1Account = new Account();
     player2Account = new Account();
-    private player1Money = Account.withdraw(1000);
-    private player2Money = Account.withdraw(1000);
+    private playBalanceOfPlayer1 = player1Account.withdraw(1000);
+    private playBalanceOfPlayer2 = player2Account.withdraw(1000);
 
     //The first argument is the playe's number(id), the second is his balance
-    private Player player1 = new Player(1, player1Money);  
-    private Player player2 = new Player(2, player2Money);  
+    private Player player1 = new Player(1, playBalance1);  
+    private Player player2 = new Player(2, playBalanceOfPlayer2);  
 
     public void start() {
         while (true) {
