@@ -9,7 +9,7 @@ public class Game {
     private playBalanceOfPlayer2 = player2Account.withdraw(1000);
 
     //The first argument is the playe's number(id), the second is his balance
-    private Player player1 = new Player(1, playBalance1);  
+    private Player player1 = new Player(1, playBalanceOfPlayer1);  
     private Player player2 = new Player(2, playBalanceOfPlayer2);  
 
     public void start() {
