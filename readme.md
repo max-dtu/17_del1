@@ -1,11 +1,20 @@
 
 # The Die Game
 
-Run in the terminal: javac *.java 
+Run in the terminal: 
+```
+javac *.java 
+```
 
-Thereafter, to play the game run: java Game
+Thereafter, to play the game run: 
+```
+java Game
+```
 
-To run the tests: java TestGame
+To run the tests: 
+```
+java TestGame
+```
 
 ## What's new in version: v1.2 (17_del2)
 - Now the user can choose how many faces a die must have:
