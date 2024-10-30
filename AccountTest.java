@@ -1,7 +1,7 @@
    import java.util.ArrayList;
 
 public class AccountTest {
-    public static void withdrawWork(int numberOfTests) {
+    public static void testWithdraw(int numberOfTests) {
         Account account = new Account();
         ArrayList<Integer> successfulWithdrawals = new ArrayList<>();
         ArrayList<Integer> failedWithdrawals = new ArrayList<>();
