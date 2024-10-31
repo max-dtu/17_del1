@@ -1,11 +1,10 @@
-import java.util.Random;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Player {
     private int playerNum;
-    private int balance;  
+    private int playBalance;  
     private Die die;         
     private Scanner scanner;  
     // Define rules as a dictionary where each key is the sum, and the value is an array with points and the console message
@@ -23,9 +22,9 @@ public class Player {
         put(12, new Object[]{650, "Fantastic! You rolled a 12! You gain +650 points!"});
     }};
 
-    public Player(int playerNum, int balance) {
+    public Player(int playerNum, int playBalance) {
         this.playerNum = playerNum;
-        this.balance = balance; 
+        this.playBalance = playBalance; 
         this.die = new Die();  
         this.scanner = new Scanner(System.in); 
     }
@@ -34,8 +33,8 @@ public class Player {
         return playerNum;
     }
 
-    public int getbalance() {
-        return balance;
+    public int getplayBalance() {
+        return playBalance;
     }
 
     public boolean play() {
@@ -55,9 +54,9 @@ public class Player {
             int points = (int) rule[0];
             String message = (String) rule[1];
 
-            // Print the rule message and update balance
+            // Print the rule message and update playBalance
             System.out.println(message);
-            balance += points;
+            playBalance += points;
 
             // If there's an extra turn condition, handle it
             if (rule.length > 2 && (boolean) rule[2]) {
@@ -68,8 +67,8 @@ public class Player {
 
 
         // Check for a win
-        if (balance >= 3000) {
-            System.out.println("Player " + playerNum + " is the winner. The winner's balance: "+ balance);
+        if (playBalance >= 3000) {
+            System.out.println("Player " + playerNum + " is the winner. The winner's playBalance: "+ playBalance);
             return true;
         }
 
