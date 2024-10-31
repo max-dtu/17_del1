@@ -34,7 +34,7 @@ public int roll(int numberOfFaces) {
     
 
 
-## Upcoming soon:
+## Coming soon:
 - The game will be available in other languages. 
           
        

@@ -3,8 +3,8 @@
 public class AccountTest {
     public static void testWithdraw(int numberOfTests) {
         Account account = new Account();
-        ArrayList<Integer> successfulWithdrawals = new ArrayList<>();
-        ArrayList<Integer> failedWithdrawals = new ArrayList<>();
+        ArrayList<Integer> balancesAfterSuccessfulWithdrawals = new ArrayList<>();
+        ArrayList<Integer> balancesAfterFailedWithdrawals = new ArrayList<>();
 
         for (int i = 0; i < numberOfTests; i++) {
             int amountToWithdraw = (int) (Math.random() * 5000);  // Range [0, 5000[
@@ -12,19 +12,19 @@ public class AccountTest {
             int balance = account.getBalance();
 
             if (amountWithdrawn == 0) {
-                failedWithdrawals.add(balance);
+                balancesAfterFailedWithdrawals.add(balance);
             } else {
-                successfulWithdrawals.add(balance);
+                balancesAfterSuccessfulWithdrawals.add(balance);
             }
         }
 
         // Print the contents of both lists
-        System.out.println("Successful Withdrawals (Balances): " + successfulWithdrawals);
-        System.out.println("Failed Withdrawals (Balances): " + failedWithdrawals);
+        System.out.println("Successful Withdrawals (Balances): " + balancesAfterSuccessfulWithdrawals);
+        System.out.println("Failed Withdrawals (Balances): " + balancesAfterFailedWithdrawals);
 
         // Check for any negative balances
-        checkForNegativeValues(successfulWithdrawals, "Successful Withdrawals");
-        checkForNegativeValues(failedWithdrawals, "Failed Withdrawals");
+        checkForNegativeValues(balancesAfterSuccessfulWithdrawals, "balancesAfterSuccessfulWithdrawals");
+        checkForNegativeValues(balancesAfterFailedWithdrawals, "balancesAfterFailedWithdrawals");
     }
 
     // Helper method to check for negative values in a list
@@ -38,9 +38,9 @@ public class AccountTest {
         }
 
         if(negativeFound){
-            System.out.println("Warning: Negative found");
+            System.out.println("Warning: Negatives found in the " + listName + " array");
         }else{
-            System.out.println("No Negative found");
+            System.out.println("No Negatives found in the " + listName + " array");
         }
     }
 }
