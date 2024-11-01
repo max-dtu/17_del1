@@ -6,8 +6,8 @@ public class Main {
      private static int playBalanceOfPlayer2 = player2Account.withdraw(1000);
 
     //The first argument is the playe's number (id), the second is his balance
-    public static Player player1 = new Player(1, playBalanceOfPlayer1);  
-    public static Player player2 = new Player(2, playBalanceOfPlayer2);  
+    private static Player player1 = new Player(1, playBalanceOfPlayer1);  
+    private static Player player2 = new Player(2, playBalanceOfPlayer2);  
     
         public static void main(String[] args) {
             while (true) {
