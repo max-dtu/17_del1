@@ -1,12 +1,11 @@
-import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Player {
     private int playerNum;
     private int playBalance;  
-    private Die die;         
-    private Scanner scanner;  
+         
+   
     // Define rules as a dictionary where each key is the sum, and the value is an array with points and the console message
     private Map<Integer, Object[]> sumRules = new HashMap<>() {{
         put(2, new Object[]{250, "Congrats! You rolled a 2! You gain +250 points."});
@@ -25,8 +24,7 @@ public class Player {
     public Player(int playerNum, int playBalance) {
         this.playerNum = playerNum;
         this.playBalance = playBalance; 
-        this.die = new Die();  
-        this.scanner = new Scanner(System.in); 
+       
     }
 
     public int getPlayerNum() {
@@ -38,10 +36,8 @@ public class Player {
     }
 
     public boolean play() {
-
-        System.out.println("Player " + playerNum + ", press Enter to roll the dice...");
-        scanner.nextLine();  
-
+        
+        Die die = new Die();
         int die1 = die.roll();  // Roll the die
         int die2 = die.roll();
         int sum = die1 + die2;
