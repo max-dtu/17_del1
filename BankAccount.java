@@ -11,14 +11,12 @@ public class BankAccount {
 
         this.balance = 1000;
 
-
     }
-
 
     public boolean deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            return true; 
+            return true;
         }
         return false;
     }
@@ -27,7 +25,7 @@ public class BankAccount {
         if (amount > 0 && balance >= amount) {
             balance -= amount;
             return amount;
-        } 
+        }
         return 0;
     }
 
@@ -37,12 +35,11 @@ public class BankAccount {
 
         destination.deposit(transferredAmount);
 
-
         return transferredAmount;
 
     }
 
-     public double getBalance() {
+    public double getBalance() {
         return balance;
     }
 

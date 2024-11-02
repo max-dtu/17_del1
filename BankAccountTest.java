@@ -1,4 +1,4 @@
-   import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class BankAccountTest {
     public static void testWithdraw(int numberOfTests) {
@@ -7,7 +7,7 @@ public class BankAccountTest {
         ArrayList<Double> balancesAfterFailedWithdrawals = new ArrayList<>();
 
         for (int i = 0; i < numberOfTests; i++) {
-            int amountToWithdraw = (int) (Math.random() * 5000);  // Range [0, 5000[
+            int amountToWithdraw = (int) (Math.random() * 5000); // Range [0, 5000[
             double amountWithdrawn = account.withdraw(amountToWithdraw);
             double balance = account.getBalance();
 
@@ -37,9 +37,9 @@ public class BankAccountTest {
             }
         }
 
-        if(negativeFound){
+        if (negativeFound) {
             System.out.println("Warning: Negatives found in the " + listName + " array");
-        }else{
+        } else {
             System.out.println("No Negatives found in the " + listName + " array");
         }
     }
