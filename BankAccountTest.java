@@ -19,8 +19,8 @@ public class BankAccountTest {
         }
 
         // Print the contents of both lists
-        System.out.println("Successful Withdrawals (Balances): " + balancesAfterSuccessfulWithdrawals);
-        System.out.println("Failed Withdrawals (Balances): " + balancesAfterFailedWithdrawals);
+        System.out.println("balancesAfterSuccessfulWithdrawals: " + balancesAfterSuccessfulWithdrawals);
+        System.out.println("balancesAfterFailedWithdrawals: " + balancesAfterFailedWithdrawals);
 
         // Check for any negative balances
         checkForNegativeValues(balancesAfterSuccessfulWithdrawals, "balancesAfterSuccessfulWithdrawals");
