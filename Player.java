@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Player {
     private int playerNum;
-    private int playBalance;  
+    private double playBalance;  
          
    
     // Define rules as a dictionary where each key is the sum, and the value is an array with points and the console message
@@ -21,7 +21,7 @@ public class Player {
         put(12, new Object[]{650, "Fantastic! You rolled a 12! You gain +650 points!"});
     }};
 
-    public Player(int playerNum, int playBalance) {
+    public Player(int playerNum, double playBalance) {
         this.playerNum = playerNum;
         this.playBalance = playBalance; 
        
@@ -31,12 +31,12 @@ public class Player {
         return playerNum;
     }
 
-    public int getplayBalance() {
+    public double getplayBalance() {
         return playBalance;
     }
 
     public boolean play() {
-        
+
         Die die = new Die();
         int die1 = die.roll();  // Roll the die
         int die2 = die.roll();

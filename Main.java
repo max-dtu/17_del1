@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class Main {
-    
-     private static Account player1Account = new Account();
-     private static Account player2Account = new Account();
-     private static int playBalanceOfPlayer1 = player1Account.withdraw(1000);
-     private static int playBalanceOfPlayer2 = player2Account.withdraw(1000);
+
+     private static BankAccount player1Account = new BankAccount("Bob", "43234522"); //owner, accountNumber
+     private static BankAccount player2Account = new BankAccount("Alice", "43234523");
+     private static double playBalanceOfPlayer1 = player1Account.withdraw(1000);
+     private static double playBalanceOfPlayer2 = player2Account.withdraw(1000);
 
     //The first argument is the playe's number (id), the second is his balance
     private static Player player1 = new Player(1, playBalanceOfPlayer1);  
