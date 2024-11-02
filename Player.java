@@ -17,12 +17,7 @@ public class Player {
             put(7, new Object[] { 0, "Sum of 7! No points earned this turn." });
             put(8, new Object[] { -70, "Uh-oh! You rolled an 8! You lose -70 points." });
             put(9, new Object[] { 60, "Awesome! You rolled a 9! You earn +60 points." });
-            put(10, new Object[] { -80, "Oh no! Sum of 10! You lose -80 points, but you get an extra turn!", true }); // true
-                                                                                                                      // means
-                                                                                                                      // grant
-                                                                                                                      // an
-                                                                                                                      // extra
-                                                                                                                      // turn
+            put(10, new Object[] { -80, "Oh no! Sum of 10! You lose -80 points, but you get an extra turn!", true }); 
             put(11, new Object[] { -50, "Bummer! You rolled an 11! You lose -50 points." });
             put(12, new Object[] { 650, "Fantastic! You rolled a 12! You gain +650 points!" });
         }
