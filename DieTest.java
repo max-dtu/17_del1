@@ -2,7 +2,7 @@ public class DieTest {
     // Test the Die class by rolling it a user-specified number of times
     public static void testDieRoll(int numRolls) {
 
-        Die die = new Die();
+        Die die = new Die(6);
         int[] rollCounts = new int[6]; // Array to store the counts for each die face (1-6)
         int twins = 0; // Counter for twins
         int[] sumArr = new int[13]; // Array for sums of two dice rolls (possible sums: 2-12)

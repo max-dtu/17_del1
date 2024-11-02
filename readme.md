@@ -18,11 +18,6 @@ java TestGame
 
 ## What's new in version: v1.2 (17_del2)
 - Now the user can choose how many faces a die must have:
-```
-public int roll(int numberOfFaces) {
-        return random.nextInt(numberOfFaces) + 1;
-    }
-```
 - Spicify the number of players easly in the Game class.
 - Spicify the number of dies in the Player Class.
 - Easly add/remove/update rules in the Player Class.

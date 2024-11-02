@@ -3,16 +3,19 @@ import java.util.Random;
 
 public class Die {
     private Random random;
+    private int numberOfFaces;
 
-    public Die() {
-        random = new Random();
+    
+
+    public Die(int numberOfFaces) {
+        this.random = new Random();
+        this.numberOfFaces = numberOfFaces;
+
     }
+
+   
 
     public int roll() {
-        return random.nextInt(6) + 1;
-    }
-
-    public int roll(int numberOfFaces) {
         return random.nextInt(numberOfFaces) + 1;
     }
 }

@@ -44,7 +44,7 @@ public class Player {
 
     public boolean playDie() {
 
-        Die die = new Die();
+        Die die = new Die(6);
         int die1 = die.roll(); // Roll the die
         int die2 = die.roll();
         int sum = die1 + die2;

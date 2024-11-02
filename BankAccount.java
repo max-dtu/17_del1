@@ -3,7 +3,7 @@ public class BankAccount {
     private String owner;
     private String accountNumber;
 
-    BankAccount(String owner, String accountNumber) {
+    public BankAccount(String owner, String accountNumber) {
 
         this.owner = owner;
 
