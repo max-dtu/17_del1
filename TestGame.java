@@ -17,7 +17,7 @@ public class TestGame {
         }
 
         DieTest.testDieRoll(numRolls);
-        AccountTest.testWithdraw(1000);
+        BankAccountTest.testWithdraw(1000);
     }
     
 }

@@ -1,15 +1,15 @@
    import java.util.ArrayList;
 
-public class AccountTest {
+public class BankAccountTest {
     public static void testWithdraw(int numberOfTests) {
-        Account account = new Account();
-        ArrayList<Integer> balancesAfterSuccessfulWithdrawals = new ArrayList<>();
-        ArrayList<Integer> balancesAfterFailedWithdrawals = new ArrayList<>();
+        BankAccount account = new BankAccount("Bob", "43234522");
+        ArrayList<Double> balancesAfterSuccessfulWithdrawals = new ArrayList<>();
+        ArrayList<Double> balancesAfterFailedWithdrawals = new ArrayList<>();
 
         for (int i = 0; i < numberOfTests; i++) {
             int amountToWithdraw = (int) (Math.random() * 5000);  // Range [0, 5000[
-            int amountWithdrawn = account.withdraw(amountToWithdraw);
-            int balance = account.getBalance();
+            double amountWithdrawn = account.withdraw(amountToWithdraw);
+            double balance = account.getBalance();
 
             if (amountWithdrawn == 0) {
                 balancesAfterFailedWithdrawals.add(balance);
@@ -28,9 +28,9 @@ public class AccountTest {
     }
 
     // Helper method to check for negative values in a list
-    private static void checkForNegativeValues(ArrayList<Integer> balances, String listName) {
+    private static void checkForNegativeValues(ArrayList<Double> balances, String listName) {
         boolean negativeFound = false;
-        for (int balance : balances) {
+        for (double balance : balances) {
             if (balance < 0) {
                 negativeFound = true;
                 System.out.println("Warning: Negative balance detected in " + listName + ": " + balance);
