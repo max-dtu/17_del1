@@ -15,11 +15,11 @@ public class Main {
             while (true) {
                 System.out.println("Player 1's turn, press Enter to roll the dice...");
                 scanner.nextLine(); 
-                if (player1.play()) break;  // Call play method on Player 1
+                if (player1.playDie()) break;  // Call play method on Player 1
 
             System.out.println("Player 2's turn, press Enter to roll the dice...");
             scanner.nextLine(); 
-            if (player2.play()) break;  // Call play method on Player 2
+            if (player2.playDie()) break;  // Call play method on Player 2
         }
     }
 }

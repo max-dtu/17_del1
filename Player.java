@@ -35,7 +35,7 @@ public class Player {
         return playBalance;
     }
 
-    public boolean play() {
+    public boolean playDie() {
 
         Die die = new Die();
         int die1 = die.roll();  // Roll the die
@@ -57,7 +57,7 @@ public class Player {
             // If there's an extra turn condition, handle it
             if (rule.length > 2 && (boolean) rule[2]) {
                  System.out.println("Player " + playerNum + " gets another turn!");
-                return play();  // Recursive call for another turn
+                return playDie();  // Recursive call for another turn
             }
         }
 
@@ -71,5 +71,7 @@ public class Player {
 
         return false;  // Player hasn't won yet
     }
+
+    
 }
 
